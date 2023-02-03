@@ -33,14 +33,3 @@
 | `yarn test`       | Run all contract tests in `test` folders. |
 | `yarn lint:fix`   | Run eslint for all JavaScript code.       |
 | `yarn pretty:fix` | Run prettier for all JavaScript code.     |
-
-## Deploying Contracts
-
-Each package has commands `yarn deploy` and `yarn verify`. Each command takes a `--network` flag. For example:
-
-```
-yarn deploy --network goerli
-yarn verify --network goerli
-```
-
-The source of these scripts can be found in the `scripts` folder of each package. The account used to deploy and verify is derived from the `PRIVATE_KEY` environment variable in `.env` in the repository root.
