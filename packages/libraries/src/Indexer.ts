@@ -144,7 +144,7 @@ export class NodeIndexer {
     this.host = hostname
   }
 
-  public async getOrdersBy(
+  public async getOrdersERC20By(
     requestFilter: RequestFilter,
     filters = false
   ): Promise<OrderResponse> {
@@ -152,7 +152,7 @@ export class NodeIndexer {
       const axiosResponse = (await axios.post(this.host, {
         jsonrpc: '2.0',
         id: '1',
-        method: 'getOrders',
+        method: 'getOrdersERC20',
         params: [{ ...this.toBigIntJson(requestFilter), filters }],
       })) as AxiosResponse<JsonRpcResponse>
       const response = axiosResponse.data.result as OrderResponse
@@ -164,12 +164,12 @@ export class NodeIndexer {
     }
   }
 
-  public async getOrders(): Promise<OrderResponse> {
+  public async getOrdersERC20(): Promise<OrderResponse> {
     try {
       const axiosResponse = (await axios.post(this.host, {
         jsonrpc: '2.0',
         id: '1',
-        method: 'getOrders',
+        method: 'getOrdersERC20',
         params: [{}],
       })) as AxiosResponse<JsonRpcResponse>
       const response = axiosResponse.data.result as OrderResponse
@@ -179,12 +179,12 @@ export class NodeIndexer {
     }
   }
 
-  public async addOrder(fullOrder: FullOrderERC20): Promise<SuccessResponse> {
+  public async addOrderERC20(fullOrder: FullOrderERC20): Promise<SuccessResponse> {
     try {
       const axiosResponse = await axios.post(this.host, {
         jsonrpc: '2.0',
         id: '1',
-        method: 'addOrder',
+        method: 'addOrderERC20',
         params: [fullOrder],
       })
       const response = axiosResponse.data.result as SuccessResponse

@@ -8,6 +8,8 @@ import {
 } from '../src/Indexer'
 import express from 'express'
 import bodyParser from 'body-parser'
+import { FullOrderERC20 } from '@airswap/typescript'
+import { Server } from 'http'
 
 describe('toSortField', () => {
   it('should match value', () => {
@@ -38,8 +40,8 @@ describe('toSortOrder', () => {
 })
 
 describe('client', () => {
-  let app
-  let server
+  let app: express
+  let server: Server
 
   before(() => {
     app = express()
@@ -51,7 +53,7 @@ describe('client', () => {
     server.close()
   })
 
-  describe('getHealthCheck', () => {
+  describe('query on server Node', () => {
     it('Should query on /', async () => {
       app.get('/', (req, res) => {
         res.send({ result: { a: 'b' } })
@@ -62,15 +64,15 @@ describe('client', () => {
       expect(health).to.eql({ a: 'b' })
     })
 
-    it('Should query on post /orders', async () => {
+    it('Should query on post /getOrdersERC20', async () => {
       app.post('/', (req, res) => {
         expect(req.body.jsonrpc).to.equal('2.0')
         expect(req.body.id).to.equal('1')
-        expect(req.body.method).to.equal('getOrders')
+        expect(req.body.method).to.equal('getOrdersERC20')
         expect(req.body.params).to.eql([{}])
         res.send({ result: { a: 'b' } })
       })
-      const health = await new NodeIndexer('http://localhost:12435').getOrders()
+      const health = await new NodeIndexer('http://localhost:12435').getOrdersERC20()
       expect(health).to.eql({ a: 'b' })
     })
   })
