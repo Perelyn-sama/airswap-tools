@@ -18,11 +18,11 @@
 
 | Package                                    | Version                                                                                                       | Description           |
 | :----------------------------------------- | :------------------------------------------------------------------------------------------------------------ | :-------------------- |
-| [`@airswap/constants`](/tools/constants)   | [![npm](https://img.shields.io/npm/v/@airswap/constants)](https://www.npmjs.com/package/@airswap/constants)   | Helpful Constants     |
-| [`@airswap/libraries`](/tools/libraries)   | [![npm](https://img.shields.io/npm/v/@airswap/libraries)](https://www.npmjs.com/package/@airswap/libraries)   | Client Libraries      |
-| [`@airswap/metadata`](/tools/metadata)     | [![npm](https://img.shields.io/npm/v/@airswap/metadata)](https://www.npmjs.com/package/@airswap/metadata)     | Token Metadata        |
-| [`@airswap/typescript`](/tools/typescript) | [![npm](https://img.shields.io/npm/v/@airswap/typescript)](https://www.npmjs.com/package/@airswap/typescript) | TypeScript Types      |
-| [`@airswap/utils`](/tools/utils)           | [![npm](https://img.shields.io/npm/v/@airswap/utils)](https://www.npmjs.com/package/@airswap/utils)           | Orders and Signatures |
+| [`@airswap/constants`](/packages/constants)   | [![npm](https://img.shields.io/npm/v/@airswap/constants)](https://www.npmjs.com/package/@airswap/constants)   | Helpful Constants     |
+| [`@airswap/libraries`](/packages/libraries)   | [![npm](https://img.shields.io/npm/v/@airswap/libraries)](https://www.npmjs.com/package/@airswap/libraries)   | Client Libraries      |
+| [`@airswap/metadata`](/packages/metadata)     | [![npm](https://img.shields.io/npm/v/@airswap/metadata)](https://www.npmjs.com/package/@airswap/metadata)     | Token Metadata        |
+| [`@airswap/typescript`](/packages/typescript) | [![npm](https://img.shields.io/npm/v/@airswap/typescript)](https://www.npmjs.com/package/@airswap/typescript) | TypeScript Types      |
+| [`@airswap/utils`](/packages/utils)           | [![npm](https://img.shields.io/npm/v/@airswap/utils)](https://www.npmjs.com/package/@airswap/utils)           | Orders and Signatures |
 
 ## Commands
 
